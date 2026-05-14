@@ -145,8 +145,5 @@ class TestAccountService(TestCase):
         
     def test_read_an_nonexistent_account(self):
         """It should raise a 404 error for an non-exisrting account"""
-        response = self.client.get(
-            f"{BASE_URL}/0"
-        )
+        response = self.client.get(f"{BASE_URL}/0")
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
-
