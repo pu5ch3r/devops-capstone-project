@@ -134,7 +134,7 @@ class TestAccountService(TestCase):
 
         # Read newly created account
         response = self.client.get(
-            f"{BASE_URL}/{account_id}", cogit statusntent_type="application/json")
+            f"{BASE_URL}/{account_id}", content_type="application/json")
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
         data = response.get_json()
