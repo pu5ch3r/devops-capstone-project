@@ -60,7 +60,7 @@ spec:
     - name: source
   params:
     - name: args
-      description: optional parameters for flake8
+      description: optional parameters for nose
       type: string
       default: -v
     - name: database_uri
