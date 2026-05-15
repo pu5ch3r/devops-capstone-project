@@ -59,9 +59,6 @@ spec:
   workspaces:
     - name: source
   params:
-    - name: message
-      description: The message to echo
-      type: string
     - name: args
       description: optional parameters for flake8
       type: string
