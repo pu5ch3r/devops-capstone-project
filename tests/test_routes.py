@@ -188,7 +188,7 @@ class TestAccountService(TestCase):
         response = self.client.post(f"{BASE_URL}/123")
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
 
-    ### SECURITY TESTS
+    # SECURITY TESTS
 
     def test_security_headers(self):
         """Responses should include security headers"""
