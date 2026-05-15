@@ -57,6 +57,7 @@ def create_accounts():
         jsonify(message), status.HTTP_201_CREATED, {"Location": location_url}
     )
 
+
 ######################################################################
 # LIST ALL ACCOUNTS
 ######################################################################
@@ -91,7 +92,7 @@ def read_account(account_id):
 
 ######################################################################
 # UPDATE AN EXISTING ACCOUNT
-################
+######################################################################
 @app.route("/accounts/<int:account_id>", methods=["PUT"])
 def update_account(account_id):
     """
@@ -110,7 +111,6 @@ def update_account(account_id):
     return account.serialize(), status.HTTP_200_OK
 
 
-
 ######################################################################
 # DELETE AN ACCOUNT
 ######################################################################
@@ -127,7 +127,6 @@ def delete_account(account_id):
         account.delete()
 
     return {}, status.HTTP_204_NO_CONTENT
-
 
 
 ######################################################################
